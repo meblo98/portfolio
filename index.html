@@ -41,6 +41,17 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "7YWE3pgwNyYPTlvON",
+			});
+		})();
+		</script>
+		<script src="assets/js/index.js"></script>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -624,14 +635,14 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
+													<textarea class="form-control" rows="8" id="message" placeholder="Message" ></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
+													<a class="contact-btn"  onclick="sendMail()" role="button">submit</a>
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
